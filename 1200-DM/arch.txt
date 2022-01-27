@@ -1,0 +1,53 @@
+1100$Client: [id, name, logo, pull$Service, push$Service, email]
+1100$Client_1050$Pull$Service$Key: [__client, pull$Service$Key]
+1100$Client_1075$Push$Service$Key: [__client, push$Service$Key]
+1100$Client_1100$Administration_1100$Authentication$Info: [__client, key]
+1100$Client_1100$Administration_1200$Session$Key: [__client, id, key, last$End$Time]
+
+1200$Claim$Request_1100$Questionaire: [__client, id]
+1200$Claim$Request_1100$Questionaire_1100$Question: [__client, __questionaire, serial$No,
+        type$1, title, mandatoriness, answer$Format, answer$Importation#Allowance, type$2]
+        || mono-answer | poly-answer
+        || standard | trigger
+1200$Claim$Request_1100$Questionaire_1100$Question_1100$Field: [__client, __questionaire,
+        __question, serial$No, caption, type]
+        || di-option | infi-option
+1200$Claim$Request_1100$Questionaire_1100$Question_1100$Field_O: [__client, __questionaire,
+        __question, __field, id, title]
+        || di-option | infi-option
+
+1200$Claim$Request_1100$Questionaire_1100$Question_1200$Trigger:
+
+1200$Claim$Request_1100$Questionaire_1100$Question_1200$Trigger: [__client, __questionaire,
+        __question, trigger, target]
+
+1200$Claim$Request_1200$Request$Submission$Interface_1100$Styl: [__client, background$Colour,
+        header$Colour]
+1200$Claim$Request_1250$Request$Initiation: [__client, id, customer, vehicle, policy,
+        progression$Key, initiation$Time]
+1200$Claim$Request_1250$Request$Initiation_1100$Customer: [__client, __customer, name,
+        emailAddr, phoneNo, homeAddr]
+1200$Claim$Request_1250$Request$Initiation_1200$Vehicle: [__client, __vehicle, vin, plateNo,
+        brand, model, releasedYear]
+1200$Claim$Request_1250$Request$Initiation_1300$Policy: [__client, __policy,
+        coverageAmountLimit, ebbStatus, claimFrequency, issuanceDate, expiryDate]
+1200$Claim$Request_1250$Request$Initiation_1400$Progression$Key: [__client, __id, key,
+        creation$Time]
+1200$Claim$Request_1300$Request: [__client, __customer, __vehicle, __policy, __questionaire,
+        answer, creation$Time]
+
+name
+email
+phoneNo
+address
+
+vin
+plateNumber
+vehicleMale
+vehicleYear
+
+coverageAmountLimit
+ebbStatus
+cummClaim
+policyIssuanceDate
+policyExpiryDate
